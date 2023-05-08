@@ -1,7 +1,7 @@
 import styles from './page.module.sass'
 import Pages from '@/components/pages'
 
-import pagedata from '@/data/pagedata'
+import pagedata from '@/data/pagedata.js'
 import slugify from 'slugify'
 
 function Page({params}) {

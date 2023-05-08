@@ -1,5 +1,4 @@
-
-'use client'
+"use client"
 
 import { useEffect, useState } from 'react'
 import Page from './page'
@@ -11,18 +10,16 @@ export default function Pages({pages, page, columns}) {
 
 	function getPageX() {
 		const col = currentPage%columns
-		console.log('col', col)
 		return (-col * 100) + 'vw'
 	}
 
 	function getPageY() {
 		const row = Math.floor(currentPage/columns)
-		console.log('row', row)
 		return (-row * 100) + 'vh'
 	}
 
 	return <div className={styles.pages}>
-		<Nav updatePage={setCurrentPage} currentPage={currentPage} />
+		<Nav pagedata={pages} updatePage={setCurrentPage} currentPage={currentPage} />
 
 		<div className={styles.pages_inner} style={{width: `${columns}00vw`, transform: `translate(${getPageX()}, ${getPageY()})`}}>
 			{pages.map((page, i) => {

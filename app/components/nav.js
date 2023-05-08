@@ -1,10 +1,9 @@
 import { useState } from "react"
-import pagedata from "../data/pagedata"
 import slugify from "slugify"
 
 import styles from './nav.module.sass'
 
-export default function Nav({updatePage, currentPage}) {
+export default function Nav({updatePage, currentPage, pagedata}) {
 	const [activePage, setActivePage] = useState(currentPage || 0)
 
 	function navigate(page, i) {
