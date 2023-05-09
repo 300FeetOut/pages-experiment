@@ -18,10 +18,12 @@ export default function Page({title, aboveFold, content, color, active}) {
 	}, [active])
 
 	return <div className={classNames(styles.page, activeAfterTimeout ? styles.active : '')} style={{backgroundColor: color}}>
-		<div className={styles.inner_page}>
-			<h1>{title}</h1>
-			{aboveFold}
-			{active && content}
+		<div className={styles.outer_page}>
+			<div className={styles.inner_page}>
+				<h1>{title}</h1>
+				{aboveFold}
+				{active && content}
+			</div>
 		</div>
 	</div>
 }

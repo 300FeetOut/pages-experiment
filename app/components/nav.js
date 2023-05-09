@@ -15,10 +15,12 @@ export default function Nav({updatePage, currentPage, pagedata}) {
 	}
 
 	return <div className={styles.nav}>
-		{pagedata.map((page, i) => {
-			return <a key={`nav_${i}`} className={i == activePage ? styles.active : ''} onClick={navigate.bind(null, page, i)}>
-				{page.title}
-			</a>
-		})}
+		<div className={styles.nav_inner}>
+			{pagedata.map((page, i) => {
+				return <a key={`nav_${i}`} className={i == activePage ? styles.active : ''} onClick={navigate.bind(null, page, i)}>
+					{page.title}
+				</a>
+			})}
+		</div>
 	</div>
 }

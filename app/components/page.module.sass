@@ -3,8 +3,6 @@
 	width: 100vw
 	height: 100vh
 	flex-shrink: 0
-	padding: 100px 30px 30px 30px
-	box-sizing: border-box
 	overflow: hidden
 	&.active
 		overflow-y: auto
@@ -12,7 +10,18 @@
 		margin-top: 0
 
 	img
-		margin: 10px
+		margin: 30px
+		@media (max-width: 1040px)
+			margin: 30px 0
+			width: 100%
+			height: auto
+			
+
+.outer_page
+	width: calc(100vw - 10px)
+	padding: 140px 30px 30px 30px
+	box-sizing: border-box
 
 .inner_page
-	max-width: 90vw
+	max-width: 1040px
+	margin: 0 auto
