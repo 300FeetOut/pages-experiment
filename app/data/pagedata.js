@@ -72,5 +72,18 @@ export default [
 			<p>Curabitur sagittis, justo et scelerisque dictum, eros nulla varius leo, id fringilla augue erat ut risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec fermentum odio sed erat auctor, sed suscipit ligula varius. Sed a nulla consequat, auctor tortor vitae, efficitur eros. Integer iaculis mi eget vulputate interdum. Pellentesque at aliquam odio. Nam eget nibh feugiat, ullamcorper libero quis, fringilla sem. Quisque porttitor commodo nibh ac mollis. Phasellus ut nunc nec erat lobortis viverra.</p>
 		</>,
 		color: '#FFD1BA'
+	},
+	{
+		title: 'Lorem ipsum dolor',
+		above_fold: <>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum nibh at lacus facilisis vestibulum. Vestibulum rutrum laoreet turpis, eget varius ex suscipit vitae. Cras sed tortor nisi. Duis lorem nulla, tincidunt vitae fringilla et, consectetur iaculis justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Donec in pretium lectus. Phasellus commodo ex nec mauris aliquam molestie. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla ultrices lorem ex, facilisis eleifend dolor feugiat at. In hac habitasse platea dictumst.</p>
+			<p>Curabitur sagittis, justo et scelerisque dictum, eros nulla varius leo, id fringilla augue erat ut risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec fermentum odio sed erat auctor, sed suscipit ligula varius. Sed a nulla consequat, auctor tortor vitae, efficitur eros. Integer iaculis mi eget vulputate interdum. Pellentesque at aliquam odio. Nam eget nibh feugiat, ullamcorper libero quis, fringilla sem. Quisque porttitor commodo nibh ac mollis. Phasellus ut nunc nec erat lobortis viverra.</p>
+		</>,
+		content: <>
+			<p>Proin interdum eget ante non viverra. Phasellus a consequat felis, vel rhoncus arcu. Pellentesque ultricies venenatis vulputate. Nulla a fringilla lectus, vel ullamcorper odio. Maecenas feugiat pharetra lacus. Pellentesque sed purus non lacus egestas posuere. Donec nec neque sed ex placerat consectetur et vel elit. Nam suscipit, odio sed venenatis ullamcorper, sem lacus ornare odio, sit amet ullamcorper turpis lacus quis leo. Pellentesque ac justo vel ante cursus ultrices. Praesent in neque sed risus sollicitudin auctor. Fusce euismod et urna et feugiat. Morbi aliquam mauris ut ipsum euismod egestas nec id velit. Nam maximus vel metus non volutpat.</p>
+			<h2>Vestibulum ullamcorper</h2>
+			<p>Nec risus a maximus. Duis ultrices fermentum turpis in rhoncus. Nunc egestas ullamcorper dapibus. Donec consectetur risus eget pharetra scelerisque. Aenean id quam nibh. Suspendisse nec sem sit amet augue elementum porta. Cras dapibus eros non laoreet bibendum. Donec tincidunt felis id consequat suscipit. Nullam ultricies justo a massa eleifend hendrerit. Donec pharetra massa non sodales placerat.</p>
+		</>,
+		color: '#A47963'
 	}
 ]
