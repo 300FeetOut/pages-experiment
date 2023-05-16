@@ -30,7 +30,7 @@ export default function Page({aboveFoldPreloaded = '', contentPreloaded = '', pa
 	useEffect(() => {
 		// use/fetch don't currently work properly in client components in next13, so we are using useEffect hook to work around.'
 		async function fetchData() {
-			const response = await fetch(`http://localhost:3000/api/database?page=${pageNumber}`)
+			const response = await fetch(`/api/database?page=${pageNumber}`)
 			const responseJson = await response.json()
 
 			const aboveFoldJsx = renderJsx(responseJson.above_fold)
