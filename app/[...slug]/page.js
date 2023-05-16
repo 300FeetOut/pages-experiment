@@ -1,5 +1,6 @@
 import styles from './page.module.sass'
 import Pages from '@/components/pages'
+import config from '@/config.js'
 
 import pagedata from '@/data/pagedata.js'
 import slugify from 'slugify'
@@ -19,7 +20,7 @@ async function Page({params}) {
 	const pageNumber = getPageNumber(params.slug)
 
 	// Statically fetch the page data for each route so the initial load is as fast as possible.
-	const response = await fetch(`/api/database?page=${pageNumber}`)
+	const response = await fetch(`${config.url}/api/database?page=${pageNumber}`)
 	const responseJson = await response.json()
 	pagedata[pageNumber] = {...pagedata[pageNumber], ...responseJson}
 

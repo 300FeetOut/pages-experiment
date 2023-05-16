@@ -5,9 +5,9 @@ import styles from './page.module.sass'
 import { useEffect, useState} from 'react'
 
 import JsxParser from 'react-jsx-parser'
+import config from '@/config'
 
 import Image from 'next/image'
-import { render } from 'react-dom'
 
 export default function Page({aboveFoldPreloaded = '', contentPreloaded = '', pageNumber, title, color, active}) {
 	const [activeAfterTimeout,  setActiveAfterTimeout] = useState(true)
@@ -30,7 +30,10 @@ export default function Page({aboveFoldPreloaded = '', contentPreloaded = '', pa
 	useEffect(() => {
 		// use/fetch don't currently work properly in client components in next13, so we are using useEffect hook to work around.'
 		async function fetchData() {
-			const response = await fetch(`/api/database?page=${pageNumber}`)
+			// const response = await fetch(`${window.location.origin}/api/database?page=${pageNumber}`)
+			console.log('c', `${config.url}/api/database?page=${pageNumber}`)
+			// const response = await fetch(`${config.url}/api/database?page=${pageNumber}`)
+			const response = await fetch(`http://localhost:3000/api/database?page=${pageNumber}`)
 			const responseJson = await response.json()
 
 			const aboveFoldJsx = renderJsx(responseJson.above_fold)
