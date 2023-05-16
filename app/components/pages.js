@@ -1,13 +1,13 @@
 "use client"
 
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import Page from './page'
 import styles from './pages.module.sass'
 import Nav from './nav'
 
 export default function Pages({pages, page, columns}) {
 	const [currentPage, setCurrentPage] = useState(page || 0)
-
+	
 	function getPageX() {
 		const col = currentPage%columns
 		return (-col * 100) + 'vw'
@@ -23,7 +23,7 @@ export default function Pages({pages, page, columns}) {
 
 		<div className={styles.pages_inner} style={{width: `${columns}00vw`, transform: `translate(${getPageX()}, ${getPageY()})`}}>
 			{pages.map((page, i) => {
-				return <Page key={`page_${i}`} active={i == currentPage} title={page.title} content={page.content} aboveFold={page.above_fold} color={page.color}></Page>
+				return <Page key={`page_${i}`} aboveFoldPreloaded={pages[i].above_fold} contentPreloaded={pages[i].content} pageNumber={i} active={i == currentPage} title={page.title} color={page.color}></Page>
 			})}
 		</div>
 	</div>

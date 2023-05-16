@@ -4,7 +4,7 @@ import Pages from '@/components/pages'
 import pagedata from '@/data/pagedata.js'
 import slugify from 'slugify'
 
-function Page({params}) {
+async function Page({params}) {
 	function getPageNumber(slug) {
 		const compareSlug = slug.join('/')
 		let foundPage = 0
@@ -15,10 +15,17 @@ function Page({params}) {
 		})
 		return foundPage
 	}
-	
+
+	const pageNumber = getPageNumber(params.slug)
+
+	// Statically fetch the page data for each route so the initial load is as fast as possible.
+	const response = await fetch(`http://localhost:3000/api/database?page=${pageNumber}`)
+	const responseJson = await response.json()
+	pagedata[pageNumber] = {...pagedata[pageNumber], ...responseJson}
+
 	return (
 		<main className={styles.main}>
-			<Pages pages={pagedata} columns={2} page={getPageNumber(params.slug)} />
+			<Pages pages={pagedata} columns={2} page={pageNumber} />
 		</main>
 	)
 }
