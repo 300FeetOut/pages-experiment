@@ -9,8 +9,9 @@ async function Page() {
 
 	// Statically fetch the page data for each route so the initial load is as fast as possible.
 	const response = await fetch(`${config.url}/api/database?page=${pageNumber}`)
-	console.log('RESPONSE', response)
-	const responseJson = await response.json()
+	const responseText = await response.text()
+	console.log('RESPONSE', responseText)
+	const responseJson = JSON.parse(responseText)
 	pagedata[pageNumber] = {...pagedata[pageNumber], ...responseJson}
 
 	return (
