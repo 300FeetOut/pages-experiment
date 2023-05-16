@@ -1,7 +1,11 @@
 import process from 'process'
 
-console.log('VERCEL_URL', process.env.VERCEL_URL)
+let url = process.env.LOCAL ? 'http://localhost:3000' : `https://${process.env.VERCEL_URL}`
+
+if (typeof window !== 'undefined') {
+	url = window.location.origin
+}
 
 export default {
-	url: process.env.LOCAL ? 'http://localhost:3000' : `https://${process.env.VERCEL_URL}`
+	url: url
 }

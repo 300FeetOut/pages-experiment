@@ -105,7 +105,6 @@ const pageData = [
 ]
 
 export async function GET(req) {
-	console.log('GET')
 	const page = req.nextUrl.searchParams.get('page')
 
 	const data = pageData[page]
