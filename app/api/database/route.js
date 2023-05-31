@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server'
 import fs from 'fs'
+import path from 'path'
 
-const pageDataString = fs.readFileSync(`./public/page-data-processed.json`, 'utf8')
+const jsonDirectory = path.join(process.cwd(), 'data');
+const pageDataString = fs.readFileSync(`${jsonDirectory}/page-data-processed.json`, 'utf8')
 
 export async function GET(req) {
 	const page = req.nextUrl.searchParams.get('page')

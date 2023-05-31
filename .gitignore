@@ -35,4 +35,4 @@ yarn-error.log*
 next-env.d.ts
 
 # preprocessed data
-/public/page-data-processed.json
+/data/page-data-processed.json
