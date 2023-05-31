@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prebuild": "node ./prebuild/generate-base64.mjs",
     "export": "next build",
     "start": "next start",
     "lint": "next lint"
