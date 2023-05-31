@@ -38,4 +38,4 @@ const processedPageContent = await Promise.all(pageData.map(async (page) => {
 	return page
 }))
 
-fs.writeFileSync(`./data/page-data-processed.json`, JSON.stringify(processedPageContent))
+fs.writeFileSync(`./public/page-data-processed.json`, JSON.stringify(processedPageContent))
